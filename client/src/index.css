@@ -1,0 +1,90 @@
+:root {
+  --total-height: 100vh;
+  --navbar-height: 50px;
+  --sidebar-height: calc(var(--total-height) - var(--navbar-height));
+}
+
+html {
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+.totalbar {
+  height: var(--total-height);
+}
+
+.navbar {
+  height: var(--navbar-height);
+}
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  background-color: #343a40;
+  color: #fff;
+  padding-top: 40px;
+  height: var(--total-height);
+}
+
+
+.sidebar .nav-link {
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.sidebar .nav-link:hover {
+  color: #2a48aa;
+  background-color: #495057;
+}
+
+.nav-link.active {
+  background-color: #5d6063;
+}
+
+.toggle-button {
+  width: 60px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 10px;
+}
+
+.toggle-button.on {
+  background-color: #4caf50;
+}
+
+.toggle-knob {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: left 0.3s;
+}
+
+.toggle-button.on .toggle-knob {
+  left: 30px;
+}
+
+.online-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.online {
+  background-color: green;
+}
+
+.offline {
+  background-color: red;
+}
